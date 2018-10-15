@@ -1,0 +1,34 @@
+Cadastro de Clientes
+O cadastro será formado por duas telas 
+uma tela de pesquisa 
+e uma de registro. 
+
+Tela de Pesquisa
+A primeira uma tela de busca dos clientes já cadastrados. 
+
+Coloque uma caixa de texto para que o usuário informe o nome que ele deseja procurar 
+e um botão de Pesquisar - ok
+
+A lista de clientes deverá ser exibida numa grid.  ok
+
+Mostrar na grid os campos (Id, Nome, Telefone E-mail) (e-mail? ) - ok
+
+Será necessário nesta tela um botão Novo para mostrar a tela de registro com um novo cliente, - ok 
+
+botão Alterar para mostrar a tela de registro com um cliente já registrado.  - ok 
+
+Será necessário um botão Excluir com mensagem de confirmação para que se exclua o cliente selecionado. - ok
+
+Tela de Registro 
+A segunda é a tela de registro onde estarão todos os controles para informar os dados dos clientes. 
+
+Utilize máscaras para os campos (mas não grave no banco a máscara, somente os números): 
+Campo Máscara CEP 99999-999 - ok
+Telefone (99) 9999-9999 - ok
+Celular (99) 9999-9999 - ok 
+
+Validações do registro Serão necessárias algumas validações no registro:
+
+• Os campos nome, logradouro, número, bairro, cidade, estado, cep, telefone são obrigatórios;  - não foi feito
+
+• Caso seja informado o e-mail, o mesmo terá que ter o @ (essa validação é simples mesma). não foi feito

@@ -1,0 +1,50 @@
+Cadastro de Pedidos 
+O cadastro de pedidos é a parte fundamental do projeto.
+ Aqui o usuário irá lançar os pedidos vinculando ao cliente,
+ e poderá informar diversos itens.
+Este cadastro será formado por: 
+
+Tela de pesquisa Aqui você terá que criar uma tela onde o usuário poderá visualizar todos os pedidos realizados por:
+
+ • Cliente: 
+ neste caso o usuário poderá selecionar num combobox um cliente; 
+ • Emissão: neste caso o usuário poderá informar o período de emissão dos pedidos, 
+ disponibilize dois campos de data para o usuário informar. 
+ Trazer como padrão as datas de início e fim do mês atual. 
+ 
+ O filtro poderá ser acumulativo, ou seja, ele poderá tanto informar o filtro dos clientes quando o período de emissão. 
+ Sugestão é colocar um checkbox para cada uma das opções do filtro para que ele seja ou não considerado na pesquisa. 
+ Coloque uma grid para exibir os pedidos retornados na pesquisa com os campos 
+ Id, Nome do Cliente, Emissão, Total Líquido.
+ Coloque um botão para Novo Pedido que exiba a tela de registro de pedido com a possibilidade de lançar um novo pedido. 
+ Coloque um botão para Visualizar Pedido que exiba a tela de registro de pedido, 
+ mas o usuário não poderá alterar o pedido. 
+ Tela de Registro 
+ Nesta tela o usuário terá que: 
+ • A data de emissão será exibida na tela com a data de atual, 
+ mas o usuário não poderá alterar; 
+ • Selecionar o cliente que ele está vendendo. 
+ Utilize um combobox para a seleção o cliente; 
+ • Após selecionar o cliente, será habilitado ao usuário lançar os itens. 
+ Coloque uma grid para mostrar os itens com os campos Produto, Valor Unitário, Quantidade e Total; 
+ • Coloque 3 botões abaixo do grid: 
+ o Novo item: neste você deverá mostrar uma tela para o usuário selecionar o produto num combobox. 
+ Ao selecionar o produto, o valor unitário será exibido na tela e o usuário poderá informar a quantidade. 
+ Não mesmo que 1 unidade; 
+ o Alterar Item: 
+ nesta tela o usuário poderá alterar somente a quantidade do produto. 
+ o Excluir Item: 
+ mostre uma confirmação de exclusão do item e caso seja positivo, exclua o item. 
+ • Coloque abaixo dos itens um campo exibindo o Total. 
+ Este campo será somente leitura. 
+ • Ao lado do Total disponibilize um campo de texto para o usuário informar o valor do desconto. 
+ O valor do desconto não poderá ser superior ao total do pedido. 
+ • Depois do desconto, crie um campo Total Líquido, 
+ este campo será a diferença entre o Total e o Valor do Desconto. 
+ Também será somente leitura.
+ 
+Validações 
+• Não poderá gravar um pedido sem cliente; 
+• Não poderá gravar um pedido sem itens; 
+• A quantidade mínima para um item é um; 
+• Não poderá gravar pedido com desconto igual ao total do pedido; 
