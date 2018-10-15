@@ -4,24 +4,22 @@ object DM: TDM
   Width = 498
   object fdConexao: TFDConnection
     Params.Strings = (
-      'Database=C:\JohnnyVaz\database\DADOS.FDB'
+      'Database=C:\ProgramaExemploDelphi\DADOS.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'Server=localhost'
       'Port=3050'
       'DriverID=FB')
-    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 32
   end
   object fdFbclient: TFDPhysFBDriverLink
-    VendorLib = 'C:\JohnnyVaz\bin\fbclient.dll'
+    VendorLib = 'C:\ProgramaExemploDelphi\fbclient.dll'
     Left = 112
     Top = 32
   end
   object qryClientes: TFDQuery
-    Active = True
     Connection = fdConexao
     SQL.Strings = (
       'SELECT * FROM CLIENTE')
@@ -84,7 +82,6 @@ object DM: TDM
     end
   end
   object qryProdutos: TFDQuery
-    Active = True
     Connection = fdConexao
     SQL.Strings = (
       'SELECT * FROM PRODUTO')
@@ -126,7 +123,6 @@ object DM: TDM
     Top = 248
   end
   object qryPedidos: TFDQuery
-    Active = True
     IndexFieldNames = 'ID;IDCLIENTE'
     Connection = fdConexao
     SQL.Strings = (
@@ -187,7 +183,6 @@ object DM: TDM
     Top = 248
   end
   object qryItemPedido: TFDQuery
-    Active = True
     IndexFieldNames = 'ID;IDPEDIDO'
     MasterSource = dsPedido
     MasterFields = 'ID;IDCLIENTE'
