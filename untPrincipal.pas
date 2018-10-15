@@ -19,6 +19,7 @@ type
     ConsultarClientes1: TMenuItem;
     ConsultarProdutos1: TMenuItem;
     CadastrodePedido1: TMenuItem;
+    ConsultaPedidos1: TMenuItem;
     procedure Clientes1Click(Sender: TObject);
     procedure ConsultarClientes1Click(Sender: TObject);
     procedure ConsultarProdutos1Click(Sender: TObject);
