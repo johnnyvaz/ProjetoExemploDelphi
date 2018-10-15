@@ -15,17 +15,6 @@ type
     fdConexao: TFDConnection;
     fdFbclient: TFDPhysFBDriverLink;
     qryClientes: TFDQuery;
-    qryClientesID: TIntegerField;
-    qryClientesNOME: TStringField;
-    qryClientesLOGRADOURO: TStringField;
-    qryClientesNUMERO: TIntegerField;
-    qryClientesBAIRRO: TStringField;
-    qryClientesCIDADE: TStringField;
-    qryClientesESTADO: TStringField;
-    qryClientesCEP: TStringField;
-    qryClientesTELEFONE: TStringField;
-    qryClientesCELULAR: TStringField;
-    qryClientesEMAIL: TStringField;
     qryProdutos: TFDQuery;
     qryProdutosID: TIntegerField;
     qryProdutosDESCRICAO: TStringField;
@@ -52,6 +41,17 @@ type
     qryItemPedidoQUANTIDADE: TIntegerField;
     qryItemPedidoVALORUNITARIO: TCurrencyField;
     qryItemPedidoTOTAL: TCurrencyField;
+    qryClientesID: TIntegerField;
+    qryClientesNOME: TStringField;
+    qryClientesLOGRADOURO: TStringField;
+    qryClientesNUMERO: TIntegerField;
+    qryClientesBAIRRO: TStringField;
+    qryClientesCIDADE: TStringField;
+    qryClientesESTADO: TStringField;
+    qryClientesCEP: TStringField;
+    qryClientesTELEFONE: TStringField;
+    qryClientesCELULAR: TStringField;
+    qryClientesEMAIL: TStringField;
   private
     { Private declarations }
   public

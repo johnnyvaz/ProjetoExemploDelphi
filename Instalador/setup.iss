@@ -36,9 +36,9 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\ProgramaExemploDelphi\ProjetoExemploDelphi.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\ProgramaExemploDelphi\database\DADOS.FDB"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\ProgramaExemploDelphi\bin\fbclient.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Win32\Release\ProjetoExemploDelphi.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\database\DADOS.FDB"; DestDir: "{app}\database\"; Flags: ignoreversion
+Source: "bin\*"; DestDir: "{app}\bin\"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
