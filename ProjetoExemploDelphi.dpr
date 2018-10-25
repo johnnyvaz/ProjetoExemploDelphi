@@ -8,13 +8,16 @@ uses
   untCadProdutos in 'untCadProdutos.pas' {frmCadProdutos},
   untCadPedidos in 'untCadPedidos.pas' {frmCadPedidos},
   untCadClientes in 'untCadClientes.pas' {frmCadClientes},
-  untCadItemPedido in 'untCadItemPedido.pas' {frmCadItemPedido};
+  untCadItemPedido in 'untCadItemPedido.pas' {frmCadItemPedido},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Cobalt XEMedia');
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TfrmCadClientes, frmCadClientes);

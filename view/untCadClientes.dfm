@@ -2,7 +2,7 @@ object frmCadClientes: TfrmCadClientes
   Left = 0
   Top = 165
   Caption = 'Cadastro de Clientes'
-  ClientHeight = 452
+  ClientHeight = 443
   ClientWidth = 757
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -114,7 +114,6 @@ object frmCadClientes: TfrmCadClientes
     Color = clActiveBorder
     DataField = 'ID'
     DataSource = dstClientes
-    ReadOnly = True
     TabOrder = 0
   end
   object edtNome: TDBEdit
@@ -585,6 +584,7 @@ object frmCadClientes: TfrmCadClientes
     DataField = 'EMAIL'
     DataSource = dstClientes
     TabOrder = 12
+    OnExit = edtEmailExit
   end
   object dstClientes: TDataSource
     DataSet = DM.qryClientes

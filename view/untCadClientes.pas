@@ -54,6 +54,8 @@ type
     procedure edtCepExit(Sender: TObject);
     procedure edtTelefoneExit(Sender: TObject);
     procedure edtCelularExit(Sender: TObject);
+    procedure edtEmailExit(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -68,6 +70,19 @@ implementation
 {$R *.dfm}
 
 uses untDM;
+///  validar e-mail
+function ValidarEMail(aStr: string): Boolean;
+begin
+ aStr := Trim(UpperCase(aStr));
+ if Pos('@', aStr) > 1 then
+ begin
+   Delete(aStr, 1, pos('@', aStr));
+   Result := (Length(aStr) > 0) and (Pos('.', aStr) > 2);
+ end
+ else
+   Result := False;
+end;
+
 
 procedure TfrmCadClientes.btnCancelarClick(Sender: TObject);
 begin
@@ -97,7 +112,7 @@ vazio := vazio + edtNumero.Text;
 vazio := vazio + edtBairro.Text;
 vazio := vazio + edtCidade.Text;
 vazio := vazio + edtEstado.Text;
-    if vazio <> ''
+    if vazio = ''
      then
        ShowMessage('Existem campos obrigatórios não preenchidos')
      else
@@ -107,11 +122,12 @@ end;
 
 procedure TfrmCadClientes.btnNovoClick(Sender: TObject);
 var
-    maxid : Integer;
+    maxid : string;
 begin
-//    maxid := 'SELECT MAX(ID)+1 FROM CLIENTE' + QuotedStr(edtId.Text);
+    maxid := 'SELECT MAX(ID)+1 FROM CLIENTE';
     btnGravar.Enabled := True;
     DM.qryClientes.Insert;
+//    edtId.Text := StringToOleStr(maxid);
 end;
 
 procedure TfrmCadClientes.btnPesquisarClick(Sender: TObject);
@@ -136,22 +152,20 @@ end;
 
 procedure TfrmCadClientes.edtCelularExit(Sender: TObject);
 begin
-    //DBEdit10.Text := FormatFloat('#(00)00000-0000',StrtoFloat(DBEdit10.Text));
+//    edtCelular.Text := FormatFloat('#(00)00000-0000',StrtoFloat(DBEdit10.Text));
+//    DBEdit10.Text := FormatFloat('#(00)00000-0000',StrtoFloat(DBEdit10.Text));
 end;
 
-//procedure TfrmCadClientes.DBEdit11Change(Sender: TObject);
-//begin
-//
-//if Pos('@', String) <> 0
-//then
-//  ShowMessage('Email inválido')
-//end;
 
 procedure TfrmCadClientes.edtCepExit(Sender: TObject);
 begin
     //DBEdit8.Text := FormatFloat('#00000-000',StrtoFloat(DBEdit8.Text));
 end;
 
+procedure TfrmCadClientes.edtEmailExit(Sender: TObject);
+begin
+    ValidarEMail(edtEmail.Text);
+end;
 
 procedure TfrmCadClientes.edtTelefoneExit(Sender: TObject);
 begin
